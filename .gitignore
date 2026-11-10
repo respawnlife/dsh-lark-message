@@ -17,3 +17,6 @@ history.jsonl
 outbox.jsonl
 inbound-events.jsonl
 approvals.jsonl
+
+# npm 凭据（本地发布用，绝不入库）
+.npmrc
