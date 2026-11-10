@@ -1,6 +1,6 @@
 {
   "name": "dsh-lark-message",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness plugin: bind a Feishu/Lark bot with a QR code to push agent notifications, task results, and local-script messages to Feishu, and chat with the assistant from Feishu.",
   "type": "module",
   "main": "index.js",
