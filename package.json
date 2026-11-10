@@ -1,7 +1,7 @@
 {
   "name": "dsh-lark-notify",
   "version": "0.1.0",
-  "description": "DeepSeek Harness 插件：扫码绑定飞书/Lark 机器人，把 Agent 通知、任务结果与本地脚本消息推送到飞书，并支持在飞书里与助手双向对话。",
+  "description": "DeepSeek Harness plugin: bind a Feishu/Lark bot with a QR code to push agent notifications, task results, and local-script messages to Feishu, and chat with the assistant from Feishu.",
   "type": "module",
   "main": "index.js",
   "exports": {
@@ -19,6 +19,7 @@
     "examples/",
     "icon.svg",
     "README.md",
+    "README.zh.md",
     "CONTRACT.md"
   ],
   "keywords": [
