@@ -1,0 +1,73 @@
+{
+  "name": "dsh-lark-notify",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness 插件：扫码绑定飞书/Lark 机器人，把 Agent 通知、任务结果与本地脚本消息推送到飞书，并支持在飞书里与助手双向对话。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/",
+    "cordis.patch.yml",
+    "locale/",
+    "examples/",
+    "icon.svg",
+    "README.md",
+    "CONTRACT.md"
+  ],
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "lark",
+    "feishu",
+    "notification",
+    "bot",
+    "webhook"
+  ],
+  "author": "respawnlife",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/respawnlife/dsh-lark-message.git"
+  },
+  "homepage": "https://github.com/respawnlife/dsh-lark-message#readme",
+  "bugs": {
+    "url": "https://github.com/respawnlife/dsh-lark-message/issues"
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "check": "node --check index.js && node --check client.js && for f in lib/*.js test/*.mjs; do node --check \"$f\"; done",
+    "test": "rm -rf /tmp/lark-notify-test && DSH_HOME=/tmp/lark-notify-test node test/reply.mjs && DSH_HOME=/tmp/lark-notify-test node test/media.mjs && DSH_HOME=/tmp/lark-notify-test node test/http.mjs",
+    "test:smoke": "rm -rf /tmp/lark-notify-smoke && DSH_HOME=/tmp/lark-notify-smoke node test/smoke.mjs"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@larksuiteoapi/node-sdk": "^1.61.1",
+    "qrcode": "^1.5.4"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}

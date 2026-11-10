@@ -1,0 +1,7 @@
+# dsh-lark-notify bundle patch：插入飞书通知通道的 Host 行。
+# 安装后可在「设置 → 飞书通知」扫码绑定机器人。
+- insert:
+    - id: lark-notify
+      name: dsh-lark-notify
+      config:
+        autoStart: true

@@ -1,0 +1,19 @@
+# 依赖与系统文件
+node_modules/
+.DS_Store
+*.log
+
+# 本地环境变量
+.env
+.env.*
+
+# 运行期本地状态（凭据 / token / 历史 / 诊断日志）——绝不入库
+.dsh/
+integrations/lark-notify/
+credentials.json
+http-token
+endpoint
+history.jsonl
+outbox.jsonl
+inbound-events.jsonl
+approvals.jsonl

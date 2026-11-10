@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Lark Notify">
+  <title>Lark Notify</title>
+  <defs>
+    <linearGradient id="larkn-bg" x1="6" y1="4" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2E7CF6"/>
+      <stop offset="1" stop-color="#13C2A4"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#larkn-bg)"/>
+  <path d="M19 18h26a7 7 0 0 1 7 7v13a7 7 0 0 1-7 7H33.5L24 52.5V45h-5a7 7 0 0 1-7-7V25a7 7 0 0 1 7-7Z" fill="#FFFFFF" opacity="0.96"/>
+  <circle cx="24" cy="32.5" r="2.6" fill="#2E7CF6"/>
+  <circle cx="32" cy="32.5" r="2.6" fill="#2E7CF6"/>
+  <circle cx="40" cy="32.5" r="2.6" fill="#13C2A4"/>
+  <circle cx="50" cy="14" r="8" fill="#FFFFFF"/>
+  <circle cx="50" cy="14" r="6" fill="#FF5A52"/>
+</svg>

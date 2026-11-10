@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Lark Notify",
+    "description": "Link a Lark bot by scanning a QR code: push DSH notifications and local script messages to Lark, and chat with the assistant directly in Lark."
+  }
+}
