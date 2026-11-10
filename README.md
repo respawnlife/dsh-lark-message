@@ -1,6 +1,6 @@
 English | [简体中文](README.zh.md)
 
-# dsh-lark-notify
+# dsh-lark-message
 
 **Turn Feishu into DeepSeek Harness (DSH)'s notification outlet — and bring Feishu conversations back into DSH.**
 
@@ -24,7 +24,7 @@ The plugin is distributed as a DSH bundle. Install it into a profile, then resta
 
 ```bash
 # Install from npm (available once published; replace <name> with your actual profile name)
-dsh plugin --profile <name> add dsh-lark-notify
+dsh plugin --profile <name> add dsh-lark-message
 ```
 
 You can also:
@@ -33,7 +33,7 @@ You can also:
 - link the source directory directly for local development:
 
   ```bash
-  dsh plugin --profile <name> add link:/path/to/dsh-lark-notify
+  dsh plugin --profile <name> add link:/path/to/dsh-lark-message
   ```
 
 After installation, a plugin page appears under **Settings → Lark Notify**.
@@ -223,7 +223,7 @@ delete the app in Feishu. To clean up completely: delete the app in the Feishu d
 ## Uninstall
 
 ```bash
-dsh plugin --profile <name> remove dsh-lark-notify
+dsh plugin --profile <name> remove dsh-lark-message
 ```
 
 Then remove `$DSH_HOME/integrations/lark-notify/` and the self-built app in Feishu as needed.

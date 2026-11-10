@@ -1,5 +1,5 @@
 /**
- * dsh-lark-notify — browser half: the «设置 → 飞书通知» page.
+ * dsh-lark-message — browser half: the «设置 → 飞书通知» page.
  *
  * Plain hand-written JavaScript, no JSX and no build step on purpose: the host's
  * client module loader (`window.__ModuleLoader__`) hands `require` in and wants a
@@ -19,7 +19,7 @@
  * token so light/dark follows the app.
  */
 window.__ModuleLoader__.load({
-  id: "dsh-lark-notify",
+  id: "dsh-lark-message",
   factory: (require) => {
     var module = { exports: {} };
     var exports = module.exports;
@@ -418,7 +418,7 @@ window.__ModuleLoader__.load({
 .${S.inlineError} { display: flex; flex-direction: column; gap: 8px; }
 `;
 
-    const STYLE_ID = "dsh-lark-notify/SettingsPage.css";
+    const STYLE_ID = "dsh-lark-message/SettingsPage.css";
 
     /**
      * Put the page CSS into the document once and return the element.
@@ -432,7 +432,7 @@ window.__ModuleLoader__.load({
       const existing = document.querySelector(`style[data-plugin-css="${STYLE_ID}"]`);
       if (existing !== null) return existing;
       const tag = document.createElement("style");
-      tag.dataset.plugin = "dsh-lark-notify";
+      tag.dataset.plugin = "dsh-lark-message";
       tag.dataset.pluginCss = STYLE_ID;
       tag.textContent = CSS;
       document.head.appendChild(tag);
@@ -1537,7 +1537,7 @@ window.__ModuleLoader__.load({
       ));
     }
 
-    exports.name = "dsh-lark-notify-client";
+    exports.name = "dsh-lark-message-client";
     exports.inject = inject;
     exports.apply = apply;
     return module.exports;

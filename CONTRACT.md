@@ -1,6 +1,6 @@
-# dsh-lark-notify —— Host ⇄ Client 接口契约（实现用，不是用户文档）
+# dsh-lark-message —— Host ⇄ Client 接口契约（实现用，不是用户文档）
 
-包名：`dsh-lark-notify`；Loader 行 id：`lark-notify`；RPC 频道：`/lark-notify`。
+包名：`dsh-lark-message`；Loader 行 id：`lark-notify`；RPC 频道：`/lark-notify`。
 
 ## 1. Client 一半的职责
 
@@ -9,7 +9,7 @@
 
 ```js
 window.__ModuleLoader__.load({
-  id: "dsh-lark-notify",
+  id: "dsh-lark-message",
   factory: (require) => {
     const React = require("react");
     // ...

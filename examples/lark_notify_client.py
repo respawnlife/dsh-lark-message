@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""dsh-lark-notify 的本地 HTTP 客户端（无第三方依赖，Python 3.8+）。
+"""dsh-lark-message 的本地 HTTP 客户端（无第三方依赖，Python 3.8+）。
 
 用途：让本地脚本/定时任务把通知交给 DSH 的飞书插件发送，
 而不是自己保存 App Secret、维护 token 与重试：
@@ -174,7 +174,7 @@ if __name__ == "__main__":
         for chat in list_chats():
             print("%s\t%s\t%s" % (chat.get("chat_id"), chat.get("chat_mode"), chat.get("name")))
         sys.exit(0)
-    text = " ".join(args) or "✅ dsh-lark-notify 脚本通道测试"
+    text = " ".join(args) or "✅ dsh-lark-message 脚本通道测试"
     r = send_markdown(text, chat_id=chat_id) if as_markdown else send_text(text, chat_id=chat_id)
     print("ok=%s sent=%s error=%s" % (r.ok, r.sent, r.error))
     sys.exit(0 if r.ok else 1)

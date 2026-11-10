@@ -1,4 +1,4 @@
-// dsh-lark-notify Host 一半：
+// dsh-lark-message Host 一半：
 //  - 扫码绑定飞书自建应用（registerApp，OAuth Device Grant）
 //  - 发送文字 / 图片（官方 Node SDK）
 //  - 设置页 RPC 频道 /lark-notify
@@ -30,7 +30,7 @@ import {
   writeEndpoint,
 } from './lib/store.js';
 
-export const name = 'dsh-lark-notify';
+export const name = 'dsh-lark-message';
 
 const CHANNEL = '/lark-notify';
 const HTTP_PREFIX = '/plugins/lark-notify';
@@ -436,7 +436,7 @@ export function apply(ctx, config = {}) {
           return ok(await manualBind(payload ?? {}));
         case 'testSend': {
           const result = await deliver({
-            text: `✅ 飞书通知通道测试\n时间 ${nowText()}\n来自 DeepSeek Harness · dsh-lark-notify\n收到这条消息说明扫码绑定和推送链路都通了。`,
+            text: `✅ 飞书通知通道测试\n时间 ${nowText()}\n来自 DeepSeek Harness · dsh-lark-message\n收到这条消息说明扫码绑定和推送链路都通了。`,
           });
           return ok(result);
         }

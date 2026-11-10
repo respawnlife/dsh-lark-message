@@ -1,6 +1,6 @@
 [English](README.md) | 简体中文
 
-# dsh-lark-notify
+# dsh-lark-message
 
 **把飞书变成 DeepSeek Harness（DSH）的通知出口，也把飞书的对话接回 DSH。**
 
@@ -25,7 +25,7 @@
 
 ```bash
 # 从 npm 安装（发布后可用；替换 desktop 为你实际的 profile 名）
-dsh plugin --profile desktop add dsh-lark-notify
+dsh plugin --profile desktop add dsh-lark-message
 ```
 
 也可以：
@@ -34,7 +34,7 @@ dsh plugin --profile desktop add dsh-lark-notify
 - 本地开发时直接链接源码目录：
 
   ```bash
-  dsh plugin --profile desktop add link:/path/to/dsh-lark-notify
+  dsh plugin --profile desktop add link:/path/to/dsh-lark-message
   ```
 
 安装完成后，`设置 → 飞书通知` 里会出现插件页面。
@@ -215,7 +215,7 @@ send_image("/abs/path/result.png", caption="结果曲线")
 ## 卸载
 
 ```bash
-dsh plugin --profile desktop remove dsh-lark-notify
+dsh plugin --profile desktop remove dsh-lark-message
 ```
 
 然后按需删除 `$DSH_HOME/integrations/lark-notify/` 与飞书里的自建应用。
